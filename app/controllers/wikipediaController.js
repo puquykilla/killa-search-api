@@ -30,9 +30,9 @@ exports.All = function(req, res) {
 	    	var metadata = [];
 	    	for (var i = 0; i < result_len; i++) {
 	    		var data = {
-		    		titles: body[1][i],
-		    		definitions: body[2][i],
-		    		urls: body[3][i]
+		    		title: body[1][i],
+		    		definition: body[2][i],
+		    		url: body[3][i]
 	    		}
 	    		metadata.push(data);
 	    	}

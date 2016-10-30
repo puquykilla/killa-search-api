@@ -7,4 +7,7 @@ module.exports = function (router) {
 
 	// wikipedia routes
 	router.get('/wikipedia/:incoming_message', controllers.WikipediaController.All);
+
+	// google routes
+	router.get('/google/:incoming_message/:start?', controllers.googleController.All);
 }

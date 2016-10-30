@@ -1,7 +1,6 @@
 var request = require('request');
 
 var config 		= require('../configs');
-var ServerTypes = require('../models/responses');
 
 // Return all wikipedia results types
 exports.All = function(req, res) {

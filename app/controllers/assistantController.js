@@ -1,5 +1,4 @@
-var config 		= require('../configs');
-var Enterprises = require('../models/responses');
+var config = require('../configs');
 
 // Return all system responses
 exports.All = function(req, res) {

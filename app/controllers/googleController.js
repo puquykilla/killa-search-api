@@ -29,25 +29,41 @@ exports.All = function(req, res) {
 	// Start the request
 	request(options, function (error, response, body) {
 	    if (!error && response.statusCode == 200) {
-	    	body = JSON.parse(body);
+	    	var body = JSON.parse(body);
+    		var response = body;
+			var items = [];
+    		for (var i = 0; i < response.items.length; i++) {
+    			items.push(response.items[i]);
+    		}
 
-	    	// var result_len = body[1].length;
-	    	// var metadata = [];
-	    	// for (var i = 0; i < result_len; i++) {
-	    	// 	var data = {
-		    // 		title: body[1][i],
-		    // 		definition: body[2][i],
-		    // 		url: body[3][i]
-	    	// 	}
-	    	// 	metadata.push(data);
-	    	// }
-	    	// var result = {
-	    	// 	origin: 'google',
-	    	// 	search_value: body[0],
-	    	// 	result_cant: result_len,
-	    	// 	metadata: metadata
-	    	// };
-			res.status(config.okCode).json({message: body});	
+			result = {
+				message: {
+					engines: [
+						{
+							name: "google",
+							metadata: {
+								request: {
+									title: response.queries.request[0].title,
+									totalResults: response.searchInformation.totalResults,
+									searchTerm: response.queries.request[0].searchTerms,
+									count: response.queries.request[0].count,
+									startIndex: response.queries.request[0].startIndex,
+								},
+								previousPage: {
+									count: response.queries.previousPage[0].count,
+									startIndex: response.queries.previousPage[0].startIndex,
+								},
+								nextPage: {
+									count: response.queries.nextPage[0].count,
+									startIndex: response.queries.nextPage[0].startIndex,
+								},
+								items: items
+							}
+						}
+					]
+				}
+			}
+			res.status(config.okCode).json(result);	
 	    } else {
 	    	res.status(config.errorCode).json({error: 'Data not found'});
 	    }

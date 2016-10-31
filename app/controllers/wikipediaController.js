@@ -26,21 +26,43 @@ exports.All = function(req, res) {
 	    	body = JSON.parse(body);
 
 	    	var result_len = body[1].length;
-	    	var metadata = [];
+	    	var items = [];
 	    	for (var i = 0; i < result_len; i++) {
 	    		var data = {
 		    		title: body[1][i],
 		    		definition: body[2][i],
 		    		url: body[3][i]
 	    		}
-	    		metadata.push(data);
+	    		items.push(data);
 	    	}
-	    	var result = {
-	    		origin: 'wikipedia',
-	    		search_value: body[0],
-	    		result_cant: result_len,
-	    		metadata: metadata
-	    	};
+
+			result = {
+				message: {
+					engines: [
+						{
+							name: "wikipedia",
+							metadata: {
+								request: {
+									title: body[0],
+									totalResults: result_len,
+									searchTerm: '',
+									count: 0,
+									startIndex: 1,
+								},
+								previousPage: {
+									count: 0,
+									startIndex: 0,
+								},
+								nextPage: {
+									count: 0,
+									startIndex: 0,
+								},
+								items: items
+							}
+						}
+					]
+				}
+			}
 			res.status(config.okCode).json({message: result});	
 	    } else {
 	    	res.status(config.errorCode).json({error: 'Data not found'});

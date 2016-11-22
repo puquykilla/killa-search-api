@@ -1,4 +1,4 @@
-# Moon Search Api
+# Killa Search Api
 
 EndPoints
 ---------

@@ -1,4 +1,4 @@
 // List of controllers
-exports.AssistantController = require('./assistantController');
+exports.KillaController = require('./killaController');
 exports.WikipediaController = require('./wikipediaController');
 exports.googleController = require('./googleController');

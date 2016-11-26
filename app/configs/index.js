@@ -19,3 +19,6 @@ exports.wikipediaFormat = process.env.WIKIPEDIAFORMAT || 'json';
 exports.googleApiKey = process.env.GOOGLEAPIKEY || 'AIzaSyDEH3STDIESmLURGNCInmAnqflpZ8w9Wrc';
 exports.googleSearchEngine = process.env.GOOGLESEARCHENGINE || '001165080723936726537:mf_nmgzt2y0';
 exports.googleApiCustomSearch = process.env.GOOGLEAPICUSTOMSEARCH || 'https://www.googleapis.com/customsearch/v1';
+
+// Google Places
+exports.placesTypes = process.env.PLACESTYPES || 'app/files/places_types.json';

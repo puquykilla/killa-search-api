@@ -9,5 +9,6 @@ module.exports = function (router) {
 	router.get('/wikipedia/:incoming_message', controllers.WikipediaController.All);
 
 	// google routes
+	router.get('/google/places/types', controllers.googlePlaceTypesController.All);
 	router.get('/google/:incoming_message/:start?', controllers.googleController.All);
 }

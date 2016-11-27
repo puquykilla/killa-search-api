@@ -92,7 +92,7 @@ function verify_previous_page(response) {
 
 function verify_next_page(response) {
 	var np = new Array();
-	if (response.queries.previousPage) {
+	if (response.queries.nextPage) {
 		np[0] = response.queries.nextPage[0].count;
 		np[1] = response.queries.nextPage[0].startIndex;
 	} else {

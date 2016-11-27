@@ -2,13 +2,15 @@ var controllers = require('../controllers');
 
 module.exports = function (router) {
 
-	// assistant routes
-	router.get('/killa', controllers.KillaController.All);
+	// killa voice responses
+	router.get('/responses', controllers.voiceResponseController.All);
 
-	// wikipedia routes
-	router.get('/wikipedia/:incoming_message', controllers.WikipediaController.All);
+	// definition routes
+	router.get('/definitions/:incoming_message', controllers.definitionController.All);
 
-	// google routes
-	router.get('/google/places/types', controllers.googlePlaceTypesController.All);
-	router.get('/google/:incoming_message/:start?', controllers.googleController.All);
+	// places types
+	router.get('/places/types', controllers.placeTypeController.All);
+
+	// web search
+	router.get('/webs/:incoming_message/:start?', controllers.webController.All);
 }

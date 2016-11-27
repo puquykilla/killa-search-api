@@ -3,25 +3,28 @@
 EndPoints
 ---------
 
-**Killa engine**
+**Killa voice responses**
 ~~~
-http://host:8080/api/v1/killa
+http://host:8080/api/v1/killa/responses
 ~~~
 
-**Wikipedia engine**
+**Definitions engine**
 ~~~~
-http://host:8080/api/v1/wikipedia/{incoming_message}
+http://host:8080/api/v1/killa/definitions/{incoming_message}
 ~~~~
 
-**Google engine**
+**Web Search engine**
 
-web custom search
+web search
 ~~~~
-http://host:8080/api/v1/google/{incoming_message}
-http://host:8080/api/v1/google/{incoming_message}/{start_index}
+http://host:8080/api/v1/killa/webs/{incoming_message}
+OR
+http://host:8080/api/v1/killa/webs/{incoming_message}/{start_index}
 ~~~~
+
+**Killa place types**
 
 places types
 ~~~~
-http://host:8080/api/v1/google/places/types
+http://host:8080/api/v1/killa/places/types
 ~~~~~

@@ -1,6 +1,6 @@
 // Server config
 exports.port = process.env.PORT || 8080;
-exports.apiPrefix = process.env.APIPREFIX || '/api/v1';
+exports.apiPrefix = process.env.APIPREFIX || '/api/v1/killa';
 
 // Response Json
 exports.responsesJson = process.env.RESPONSESJSON || 'app/files/responses.json';

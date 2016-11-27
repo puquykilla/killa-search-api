@@ -1,11 +1,11 @@
 // List of controllers
 
 // Killa controllers
-exports.KillaController = require('./killaController');
+exports.voiceResponseController = require('./voiceResponseController');
 
 // Wikipedia controllers
-exports.WikipediaController = require('./wikipediaController');
+exports.definitionController = require('./definitionController');
 
 // Google controllers
-exports.googleController = require('./googleController');
-exports.googlePlaceTypesController = require('./googlePlaceTypesController');
+exports.webController = require('./webController');
+exports.placeTypeController = require('./placeTypeController');

@@ -1,5 +1,30 @@
 # Killa Search Api
 
+Install
+-------
+
+**Create all docker container and the network for the project**
+~~~~
+make install
+~~~~
+
+
+Uninstall
+---------
+
+**Remove all docker containers and network**
+~~~~
+make uninstall
+~~~~
+
+Help commands
+-------------
+
+**Show the list of commands**
+~~~~
+make
+~~~~
+
 EndPoints
 ---------
 

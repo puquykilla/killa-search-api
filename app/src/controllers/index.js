@@ -1,7 +1,7 @@
 // List of controllers
 
 // Killa controllers
-exports.voiceResponseController = require('./voiceResponseController');
+exports.internalResponseController = require('./internalResponseController');
 
 // Wikipedia controllers
 exports.definitionController = require('./definitionController');

@@ -1,4 +1,6 @@
 // Server config
+exports.systemFieldReplace = process.env.SYSTEMFIELDREPLACE || 'system_name'
+exports.systemName = process.env.SYSTEMNAME || 'killa';
 exports.port = process.env.PORT || 8080;
 exports.apiPrefix = process.env.APIPREFIX || '/api/v1/killa';
 

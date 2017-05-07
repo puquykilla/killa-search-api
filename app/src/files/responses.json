@@ -1,6 +1,5 @@
 {
 	"responses": {
-		"system_name": "En qué puedo ayudarlo.",
 		"cuál es tu nombre": "mi nombre es system_name.",
 		"cual es tu nombre": "mi nombre es system_name.",
 		"donde naciste": "naci en el cuarto de mi creador devlusaja.",
@@ -34,5 +33,6 @@
 		"donde estas" : "¡en el polo norte! un tormado me voló la casa hasta allá!",
 		"llegaste" : "Noo... estás viendo un holograma!"
 	},
-	"default": "Lo siento, no pude encontrar la información solicitada."
+	"default": "Lo siento, no pude encontrar la información solicitada.",
+	"system_name": "En qué puedo ayudarlo."
 }

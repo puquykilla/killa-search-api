@@ -1,0 +1,20 @@
+version: '2'
+services:
+  lb:
+    image: dockercloud/haproxy
+    environment:
+      ADDITIONAL_SERVICES: killaassistant:api
+      STATS_AUTH: 'killa:123'
+      STATS_PORT: '1936'
+      MONITOR_PORT: '80'
+      MONITOR_URI: '/status'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+      - 1936:1936
+
+networks:
+  default:
+    external:
+      name: KillaNetwork

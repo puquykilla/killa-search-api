@@ -1,12 +1,12 @@
 {
-  "name": "moon-search-api",
+  "name": "killa-assistant-api",
   "version": "1.0.0",
-  "description": "Moon Search Api",
-  "main": "app/server.js",
+  "description": "Killa Assistant Api",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dev Lusaja <Project-Moon>",
+  "author": "Dev Lusaja <Project-Killa>",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",

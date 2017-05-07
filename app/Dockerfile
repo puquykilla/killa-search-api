@@ -1,7 +1,7 @@
 FROM node:0.12
 
-ADD . /usr/local/moon
-WORKDIR /usr/local/moon
+ADD . /usr/local/killa
+WORKDIR /usr/local/killa
 
 RUN npm install nodemon -g
 RUN npm install

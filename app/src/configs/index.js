@@ -3,7 +3,7 @@ exports.port = process.env.PORT || 8080;
 exports.apiPrefix = process.env.APIPREFIX || '/api/v1/killa';
 
 // Response Json
-exports.responsesJson = process.env.RESPONSESJSON || 'app/files/responses.json';
+exports.responsesJson = process.env.RESPONSESJSON || 'src/files/responses.json';
 
 // Status Codes
 exports.errorCode = process.env.ERRORCODE || 500;

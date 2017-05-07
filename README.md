@@ -3,7 +3,7 @@
 Install
 -------
 
-**Create all docker container and the network for the project**
+Create all docker container and the network for the project
 ~~~~
 make install
 ~~~~
@@ -12,7 +12,7 @@ make install
 Uninstall
 ---------
 
-**Remove all docker containers and network**
+Remove all docker containers and network
 ~~~~
 make uninstall
 ~~~~
@@ -20,40 +20,51 @@ make uninstall
 Help commands
 -------------
 
-**Show the list of commands**
+Show the list of commands
 ~~~~
 make
+~~~~
+
+Adding HostName
+---------------
+
+Add the hostname for the project
+~~~~
+sudo vim /etc/hosts
+
+# add this line
+127.0.0.1 killa.dev
 ~~~~
 
 EndPoints
 ---------
 
-**Killa voice responses**
+Killa voice responses
 ~~~
 Method: GET
-http://host:8080/api/v1/killa/responses
+http://killa.dev/api/v1/killa/responses
 ~~~
 
-**Definitions engine**
+Definitions engine
 ~~~~
 Method: GET
-http://host:8080/api/v1/killa/definitions/{search_value}
+http://killa.dev/api/v1/killa/definitions/{search_value}
 ~~~~
 
-**Web Search engine**
+Web Search engine
 
 web search
 ~~~~
 Method: GET
-http://host:8080/api/v1/killa/webs/{search_value}
+http://killa.dev/api/v1/killa/webs/{search_value}
 OR
-http://host:8080/api/v1/killa/webs/{search_value}/{start_index}
+http://killa.dev/api/v1/killa/webs/{search_value}/{start_index}
 ~~~~
 
-**Killa place types**
+Killa place types
 
 places types
 ~~~~
 Method: GET
-http://host:8080/api/v1/killa/places/types
+http://killa.dev/api/v1/killa/places/types
 ~~~~~
